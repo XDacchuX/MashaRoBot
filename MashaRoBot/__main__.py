@@ -74,34 +74,34 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hellow My name is` *Masha*
+`Hello My name is` *Group Manager*
 `I'm here to help you manage your groups! Hit` *📚Commands* `button below to find out more about how to use me to my full potential.` 
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD MASHA TO YOUR GROUP ➕️", url="t.me/MashaRoBot?startgroup=true"),
+            text="Contact", url="t.me/Dacchu_xy"),
     ],
     [
-        InlineKeyboardButton(text="ℹ️ ABOUT", callback_data="masha_"),
-        InlineKeyboardButton(text="📚 COMMANDS", callback_data="help_back"),
+        InlineKeyboardButton(text="About", callback_data="masha_"),
+        InlineKeyboardButton(text="Commands", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
-            text="💾 SOURCE", callback_data="source_"),
+            text="Channel", url="https://t.me/DreamStudyIn"),
         InlineKeyboardButton(
-            text="👥 SUPPORT", url="https://t.me/wastebots"
+            text="Study Group", url="https://t.me/KarnatakaDreamWorld"
         ),
     ],
 ]
 
 
 HELP_STRINGS = """
-*『HELP BUTTONS HERE』*"""
+*Help Buttons*"""
 
 
-DONATE_STRING = """No need.. I'm rich"""
+DONATE_STRING = """No need.. I'm Not Yet asked"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -300,7 +300,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="「 GO BACK 」", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="Go Back", callback_data="help_back")]]
                 ),
             )
 
@@ -346,15 +346,15 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *MASHA*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *Group Manager*, a powerful group management bot built to help you manage your group easily.
                  ❍ I can restrict users.
                  ❍ I can greet users with customizable welcome messages and even set a group's rules.
                  ❍ I have an advanced anti-flood system.
                  ❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  ❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  ❍ I check for admins' permissions before executing any command and more stuffs
-                 \n_Masha's licensed under the GNU General Public License v3.0_
-                 Here is the [💾Repository](https://github.com/Mr-Dark-Prince/MashaRoBot).
+                 \n_Group Manager's licensed under the GNU General Public License v3.0_
+                 Study Point Channel @DreamStudyIn.
                  If you have any question about Masha, let us know at @WasteBots.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -381,8 +381,8 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *MASHA*
-                 \nHere is the [Source Code](https://github.com/Mr-Dark-Prince/MashaRoBot) .""",
+            text=""" Hi.. I'm *Group Managee*
+                 \nHere is the [Study Group](https://t.me/KarnatakaDreamWorld) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
@@ -677,7 +677,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Yes I'm alive 😹")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Manager Alive")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
