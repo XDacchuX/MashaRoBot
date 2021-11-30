@@ -97,12 +97,12 @@ And the following:
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
 
-MASHA_IMG = "https://telegra.ph/file/46e6d9dfcb3eb9eae95d9.jpg"
+MASHA_IMG=  "https://telegra.ph/file/e822670e844b851d0e54d.jpg"
 
 DONATE_STRING =""" No Need I won't I am Free!
  Join Our [Study Group] (https://t.me/KarnatakaDreamWorld)\
  Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to use me as a study group manager."""
+ Those who can provide monetary support are welcome to use me as a study group manager."""
 
 IMPORTED = {}
 MIGRATEABLE = []
