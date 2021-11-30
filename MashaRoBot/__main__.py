@@ -355,7 +355,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
                  ❍ I check for admins' permissions before executing any command and more stuffs
                  \n_Group Manager's licensed under the GNU General Public License v3.0_
                  Study Point Channel @DreamStudyIn.
-                 If you have any question about Masha, let us know at @WasteBots.""",
+                 If you have any question about Manager, let us know at @RazeBots.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
