@@ -74,24 +74,24 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hellow My name is` *Masha*
+`Hii I am` *Robot*
 `I'm here to help you manage your groups! Hit` *📚Commands* `button below to find out more about how to use me to my full potential.` 
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD MASHA TO YOUR GROUP ➕️", url="t.me/MashaRoBot?startgroup=true"),
+            text="Contact", url="t.me/XDacchuX"),
     ],
     [
-        InlineKeyboardButton(text="ℹ️ ABOUT", callback_data="masha_"),
-        InlineKeyboardButton(text="📚 COMMANDS", callback_data="help_back"),
+        InlineKeyboardButton(text=" ABOUT", callback_data="masha_"),
+        InlineKeyboardButton(text=" COMMANDS", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
-            text="💾 SOURCE", callback_data="source_"),
+            text="StudY Point ", url=" https://t.me/DreamStudyIn"),
         InlineKeyboardButton(
-            text="👥 SUPPORT", url="https://t.me/wastebots"
+            text="Group", url="https://t.me/KarnatakaDreamWorld"
         ),
     ],
 ]
@@ -101,7 +101,7 @@ HELP_STRINGS = """
 *『HELP BUTTONS HERE』*"""
 
 
-DONATE_STRING = """No need.. I'm rich"""
+DONATE_STRING = """No need..I am Free"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -346,16 +346,16 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *MASHA*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *Manager Robot*, a powerful group management bot built to help you manage your group easily.
                  ❍ I can restrict users.
                  ❍ I can greet users with customizable welcome messages and even set a group's rules.
                  ❍ I have an advanced anti-flood system.
                  ❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  ❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  ❍ I check for admins' permissions before executing any command and more stuffs
-                 \n_Masha's licensed under the GNU General Public License v3.0_
-                 Here is the [💾Repository](https://github.com/Mr-Dark-Prince/MashaRoBot).
-                 If you have any question about Masha, let us know at @WasteBots.""",
+                 \n_Manager Robot is licensed under the GNU General Public License v3.0_
+                 Here is the [Study Group](https://t.me/KarnatakaDreamWorld).
+                 If you have any question about Manager Robot, let us know at @RazeBots.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -381,8 +381,8 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *MASHA*
-                 \nHere is the [Source Code](https://github.com/Mr-Dark-Prince/MashaRoBot) .""",
+            text=""" Hello I am Study Group Manager
+                 \nHere is Our [Study Group] (t.me/KarnatakaDreamWorld).""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
